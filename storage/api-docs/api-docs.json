@@ -1,0 +1,395 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "L5 OpenApi",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "darius@matulionis.lt"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0",
+        "x-logo": {
+            "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000",
+            "description": "SwaggerHUB API Mocking"
+        }
+    ],
+    "paths": {
+        "/api/dresses": {
+            "get": {
+                "tags": [
+                    "Weddings Dresses"
+                ],
+                "summary": "Wedding Dresses",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getdress",
+                "parameters": [
+                    {
+                        "name": "wdresses",
+                        "in": "query",
+                        "description": "All DRESSES",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/abdresses": {
+            "get": {
+                "tags": [
+                    "Abaya Dresses"
+                ],
+                "summary": "Abaya Dresses",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getabdress",
+                "parameters": [
+                    {
+                        "name": "abdress",
+                        "in": "query",
+                        "description": "All DRESSES",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/fotogallaries": {
+            "get": {
+                "tags": [
+                    "BEATY SALON FOTOGALLARY"
+                ],
+                "summary": "FOTOGALLARY",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getfotogallary",
+                "parameters": [
+                    {
+                        "name": "fotogallary",
+                        "in": "query",
+                        "description": "All Gallary",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/shoes": {
+            "get": {
+                "tags": [
+                    "SHOES"
+                ],
+                "summary": "SHOES",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getshoes",
+                "parameters": [
+                    {
+                        "name": "shoes",
+                        "in": "query",
+                        "description": "All Shoes",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/accesories": {
+            "get": {
+                "tags": [
+                    "ACCESOIRES"
+                ],
+                "summary": "ACCESORIES",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getaccesories",
+                "parameters": [
+                    {
+                        "name": "accesories",
+                        "in": "query",
+                        "description": "All accesories",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/works": {
+            "get": {
+                "tags": [
+                    "ACCESORIES WORKS"
+                ],
+                "summary": "Beaty Salon",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getworks",
+                "parameters": [
+                    {
+                        "name": "fotogallary",
+                        "in": "query",
+                        "description": "All Gallary",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/gallaries": {
+            "get": {
+                "tags": [
+                    "Abaya Gallaries"
+                ],
+                "summary": "Gallaries",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getgallaries",
+                "parameters": [
+                    {
+                        "name": "abgallaries",
+                        "in": "query",
+                        "description": "All Gallary",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/adresses": {
+            "get": {
+                "tags": [
+                    "Abaya Dresses"
+                ],
+                "summary": "AbayaDresses",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getadresses",
+                "parameters": [
+                    {
+                        "name": "abgallaries",
+                        "in": "query",
+                        "description": "All Abya Dresses",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/visagets": {
+            "get": {
+                "tags": [
+                    "Visagets WORKS"
+                ],
+                "summary": "Visagets WORKS",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getvisagets",
+                "parameters": [
+                    {
+                        "name": "abgallaries",
+                        "in": "query",
+                        "description": "All Abya Dresses",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "available",
+                            "enum": [
+                                "available",
+                                "pending",
+                                "sold"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid status value"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        }
+    }
+}
